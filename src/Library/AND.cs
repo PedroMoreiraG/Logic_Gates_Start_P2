@@ -4,39 +4,37 @@ namespace Library
 {
     public class AND
     {
-        private string name;
-        private ArrayList entrada;
+        private string nombre;
+        private ArrayList listaLetras;
+        private ArrayList listaValores;
 
-        public string Name
+        public string Nombre
         {
-            get { return this.name; }
-            set { this.name = value; }
+            get { return this.nombre; }
+            set { this.nombre = value; }
         }
 
-        public AND(string name)
+        public AND(string nombre)
         {
-            this.name = name;
-            entrada = new ArrayList(); // Inicializar la lista
+            this.nombre = nombre;
+            this.listaLetras = new ArrayList();
+            this.listaValores = new ArrayList();
         }
 
-        public void AgregarEntrada(string nameEntry, int entrada1)
+        public void AgregarEntrada(string letra, int valor)
         {
-            entrada.Add(entrada1);
-            if (entrada.Count > 2)
+            if (listaValores.Count >= 2)
             {
-                entrada.Clear();
-                entrada.Add(entrada1);
+                listaValores.Clear();
+                listaLetras.Clear();
             }
-        }
-        
-        public string getNombre()
-        {
-            return this.name;
+            listaValores.Add(valor);
+            listaLetras.Add(letra);
         }
 
         public int Calcular()
         {
-            if (Convert.ToInt32(entrada[0]) == 1 && Convert.ToInt32(entrada[1]) == 1)
+            if (Convert.ToInt32(listaValores[0]) == 1 && Convert.ToInt32(listaValores[1]) == 1)
             {
                 return 1;
             }
