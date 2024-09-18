@@ -16,7 +16,6 @@ public class GarageGate
         CompuertaAND.AgregarEntrada(a, valorA);
         CompuertaAND.AgregarEntrada(b, valorB);
         
-        
         CompuertaNOT.AgregarEntrada(CompuertaAND.getNombre(), CompuertaAND.Calcular());
         
         CompuertaOR.AgregarEntrada(CompuertaAND.getNombre(), CompuertaAND.Calcular());
