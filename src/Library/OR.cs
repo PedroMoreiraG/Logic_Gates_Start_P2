@@ -18,6 +18,8 @@ public class OR
     public OR(String nombre)
     {
         this.nombre = nombre;
+        this.listaLetras = new ArrayList();
+        this.listaValores = new ArrayList();
     }
 
     
