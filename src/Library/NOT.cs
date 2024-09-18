@@ -29,7 +29,12 @@ public class NOT
             this.entrada.Add(entrada1);  
         }
     }
-
+    
+    public string getNombre()
+    {
+        return this.name;
+    }
+    
     public int Calcular()
     {
        
