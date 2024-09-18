@@ -15,9 +15,9 @@ public class OR
     }
 
     
-    public OR(String name)
+    public OR(String nombre)
     {
-        this.nombre = name;
+        this.nombre = nombre;
     }
 
     
