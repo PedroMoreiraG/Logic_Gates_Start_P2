@@ -15,11 +15,18 @@ public class GarageGate
     {
         CompuertaAND.AgregarEntrada(a, valorA);
         CompuertaAND.AgregarEntrada(b, valorB);
+        int primerAND = CompuertaAND.Calcular();
         
-        CompuertaNOT.AgregarEntrada(CompuertaAND.getNombre(), CompuertaAND.Calcular());
+        CompuertaNOT.AgregarEntrada(b, valorB);
+        int notB = CompuertaNOT.Calcular();
+        CompuertaNOT.AgregarEntrada(a, valorA);
+        int notA = CompuertaNOT.Calcular();
         
-        CompuertaOR.AgregarEntrada(CompuertaAND.getNombre(), CompuertaAND.Calcular());
-        CompuertaOR.AgregarEntrada(CompuertaNOT.getNombre(), CompuertaNOT.Calcular());
+        CompuertaAND.AgregarEntrada("notA", notA);
+        CompuertaAND.AgregarEntrada("notB", notB);
+        
+        CompuertaOR.AgregarEntrada("PrimerAnd", primerAND);
+        CompuertaOR.AgregarEntrada("SegundoAnd", CompuertaAND.Calcular());
 
         CompuertaAND.AgregarEntrada(CompuertaOR.getNombre(), CompuertaOR.Calcular());
         CompuertaAND.AgregarEntrada(c, valorC);
